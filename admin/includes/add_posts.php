@@ -77,10 +77,25 @@
         <label for="title">Post Author</label>
         <input type="text" class="form-control" name="author">
     </div>
+    <div>
+        <label for="title">Post Status</label>
+    </div>
+     <div class="form-group">
+       
+       <select name="post_status" id="post_status">
+       
+         <option>Draft</option>
+        <option>Published</option>
+        
+           
+       </select>
+    </div>
+<!--
      <div class="form-group">
         <label for="title">Post Status</label>
         <input type="text" class="form-control" name="post_status">
     </div>
+-->
      <div class="form-group">
         <label for="title">Post Image</label>
         <input type="file" class="form-control" name="image">
@@ -91,7 +106,7 @@
     </div>
      <div class="form-group">
         <label for="title">Post content</label>
-        <textarea class="form-control" name="post_content" id="" cols="30" rows="10"></textarea>
+         <textarea class="form-control" name="post_content" id="body" cols="30" rows="10"></textarea>
     </div>
      <div class="form-group">
         <input type="submit" class="btn btn-primary" name="create_post" value="Publish Post">

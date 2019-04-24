@@ -69,7 +69,8 @@ if(isset($_POST['update_post'])){
                  $update_post = mysqli_query($connection, $query);
     
                   confirm($update_post);
-                 header("Location: admin_posts.php");
+                   echo "<p class='bg-success'>Post Updated: "."" . "Go to " ."<a href='../post.php?p_id={$post_id};'>View Post</a> Or <a href='edit_post.php';'> Edit More Posts</a</p> "; 
+//                 header("Location: admin_posts.php");
                        
 }
 
@@ -109,9 +110,24 @@ if(isset($_POST['update_post'])){
         <label for="title">Post Author</label>
         <input value="<?php echo $post_author;?>" type="text" class="form-control" name="author">
     </div>
-     <div class="form-group">
+    <div>
         <label for="title">Post Status</label>
-        <input value="<?php echo $post_status;?>" type="text" class="form-control" name="post_status">
+    </div>
+    <div class="form-group">
+     
+    <select name="post_status" id="">
+        <option value='<?php echo $post_status; ?>'><?php echo $post_status; ?></option>
+        <?php 
+        
+        if($post_status == "Published"){
+            echo "<option>Published</option>";
+        } else {
+            echo "<option>Draft</option>";
+        }
+        
+        ?>
+        
+    </select>
     </div>
      <div class="form-group">
        <label for="title">Post Image</label>

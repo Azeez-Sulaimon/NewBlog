@@ -27,6 +27,8 @@
                          $create_user_query = mysqli_query($connection, $query); 
 
                          confirm($create_user_query);
+                        
+                         echo "<p class='bg-success'>User Created: "."" . "<a href='users.php'>View Users</a></p> ";  
 
                         
                        
